@@ -1,0 +1,194 @@
+
+
+
+
+/*===========================
+      12.BLOG css 
+===========================*/
+
+
+.blog-area{
+    position: relative;
+    
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+    
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+    
+    & .blog-man{
+        position: absolute;
+        left: 50px;
+        bottom: -95px;
+        width: 130px;
+        z-index: 9;
+        
+        @media #{$xs}{
+            width: 50px;
+            bottom: -35px;
+        }
+        @media #{$md}{
+            width: 85px;
+            bottom: -75px;
+        }
+        
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+.single-blog{
+    padding: 30px 30px 40px;
+    background-color: $white;
+    border: 1px solid $border-color;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+    
+    
+    & .blog-content{
+        position: relative;
+        z-index: 5;
+        & .blog-title{
+            & a{
+                font-size: 18px;
+                color: $heading-color;
+                font-weight: 600;
+                @include transition(0.3s);
+            }
+        }
+        & p{
+            margin-top: 25px;
+            @include transition(0.3s);
+        }
+    }
+    & .blog-meta{
+         position: relative;
+        z-index: 5;
+        & .blog-author{
+            & img{
+                border-radius: 50%;
+            }
+        }
+        & .meta-title{
+            padding-left: 20px;
+            
+            & .title{
+                font-weight: 400;
+                font-weight: 16;
+                color: $theme-color;
+                @include transition(0.3s);
+                
+                & a{
+                   color: $body-color;
+                    @include transition(0.3s);
+                }
+            }
+        }
+    }
+    
+    &.active,
+    &:hover{
+        background: url(../images/blog/blog-1.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        -webkit-transition: background 0.3s;
+        -moz-transition: background 0.3s;
+        -o-transition: background 0.3s;
+        transition: background 0.3s;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: rgba(255, 58, 70, 0.85);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        & .blog-content{
+            & .blog-title{
+                & a{
+                    color: $white;
+                }
+            }
+            
+            & p{
+                color: $white;
+            }
+        }
+        
+        & .blog-meta{
+            & .meta-title{
+                & .title{
+                    color: $white;
+                }
+                & a{
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+    &.blog-tow{
+        & .blog-meta{
+            & .meta-title{
+                & .title{
+                    color: $theme-color-3;
+                }
+            }
+        } 
+        
+        &.active,
+        &:hover{
+            &::before{
+                background-color: rgba(31,224,118,0.85);
+            }
+            & .blog-meta{
+                & .meta-title{
+                    & .title{
+                        color: $white;
+                    }
+                }
+            } 
+        }      
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

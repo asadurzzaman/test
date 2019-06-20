@@ -1,0 +1,52 @@
+// Font Family
+$poppins: 'Poppins', sans-serif;
+$rubik: 'Rubik', sans-serif;
+
+
+// Colors ---------------
+
+// Common Color
+
+$white: #fff;
+$black: #222;
+$grey:#f9f9ff;
+$grey-2:#efefef;
+$grey-3:#f1effa;
+$black-soft:#7e7e7e;
+
+// Theme Color
+
+$theme-color: #ff3a46;
+$theme-color-2: #3648b2;
+
+
+// Theme Color Index 2
+
+$theme-color-3: #1fe075;
+
+
+// Body Color
+$body-color: #63688e;
+$body-color-2: #a1a1a1;
+
+// Border Color
+$border-color:#ddd;
+
+
+// Heading Color
+$heading-color: #0a0c19;
+
+
+// Footer Color
+$footer-color: #262e45;
+
+
+// Responsive Variables
+$desktop: 'only screen and (min-width: 1400px)';
+$laptop: 'only screen and (min-width: 1200px) and (max-width: 1400px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs:'(max-width: 767px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+

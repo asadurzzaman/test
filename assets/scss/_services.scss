@@ -1,0 +1,144 @@
+
+
+
+
+/*===========================
+      6.SERVICES css 
+===========================*/
+
+
+.services-area{
+    position: relative;
+    
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+    
+    & .services-woman{
+        width: 100px;
+        position: absolute;
+        bottom: -125px;
+        right: 50px;
+        z-index: 5;
+        
+        @media #{$xs}{
+            width: 45px;
+            bottom: -55px;
+        }
+        @media #{$md}{
+            width: 65px;
+            bottom: -80px;
+        }
+    }
+}
+
+
+.services-content{
+    position: relative;
+    
+    &::before{
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        content: '';
+        left: -30px;
+        top: 0;
+        background-color: $border-color;
+        
+        @media #{$xs}{
+            left: -10px;
+        }
+    }
+    & .single-services{
+        padding: 30px;
+        border-radius: 5px;
+        position: relative;
+        
+        @media #{$xs}{
+            padding: 20px;
+        }
+        @media #{$sm}{
+            padding: 30px;
+        }
+        
+        & .services-title{
+            font-size: 24px;
+            color: $heading-color;
+            padding-bottom: 15px;
+
+            @media #{$lg}{
+                font-size: 18px;
+            }
+            @media #{$xs}{
+                font-size: 18px;
+            }
+            @media #{$sm}{
+                font-size: 20px;
+            }
+        }
+        &::before{
+            width: 3px;
+            height: 0;
+            position: absolute;
+            content: '';
+            left: -30px;
+            bottom: 0;
+            background-color: $theme-color;
+            @include transition(0.3s);
+            
+            @media #{$xs}{
+                left: -10px;
+            }
+        }
+        &:hover{
+            @include box-shadow(-6px 6px 24px 0px rgba(201,201,201,0.35));
+            
+            &::before{
+                height: 100%;
+                top: 0;
+                bottom: auto;
+            }
+        }
+    }
+    
+    & .active{
+        & .single-services{
+            @include box-shadow(-6px 6px 24px 0px rgba(201,201,201,0.35));
+            
+            &::before{
+                height: 100%;
+                top: 0;
+                bottom: auto;
+            }
+        }
+    }
+    
+/*==== INDEX 2 ====*/
+    
+    &.services-tow{
+        & .single-services{
+            &::before{
+                background-color: $theme-color-3;
+            }
+        }
+    }
+}
+
+
+.services-image{
+    & img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,181 @@
+
+
+
+
+/*===========================
+      13.CONTACT css 
+===========================*/
+
+
+.contact-area{
+    background: rgb(67,41,176);
+    background: -webkit-linear-gradient(left, rgba(67,41,176,1) 0%, rgba(207,95,187,1) 100%);
+    background: -o-linear-gradient(left, rgba(67,41,176,1) 0%, rgba(207,95,187,1) 100%);
+    background: linear-gradient(to right, rgba(67,41,176,1) 0%, rgba(207,95,187,1) 100%);
+    position: relative;
+    z-index: 5;
+    
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+    
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+    
+    &::before{
+        position: absolute;
+        content: '';
+        background-image: url(../images/pattern.png);
+        background-position: center center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    & .contact-woman{
+        position: absolute;
+        right: 50px;
+        bottom: -100px;
+        width: 115px;
+        z-index: 9;
+        
+        @media #{$xs}{
+            width: 60px;
+            bottom: -50px;
+        }
+        @media #{$md}{
+            width: 90px;
+            bottom: -80px;
+        }
+        
+        & img{
+            width: 100%;
+        }
+    }
+
+/*==== INDEX 2 ====*/
+    
+    &.contact-tow{
+        background: $white;
+    }
+}
+
+
+.form-group {
+	margin-bottom: 0;
+}
+
+.single-contact-form{
+    margin-top: 30px;
+    
+    & input,
+    & textarea{
+        width: 100%;
+        height: 70px;
+        border-radius: 5px;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.20);
+        color: $white;
+        padding: 0 30px;
+        font-size: 16px;
+        font-family: $rubik;
+        
+        @include placeholder{
+            color: $white;
+            opacity: 1;
+        }
+    }
+    
+    & textarea{
+        padding-top: 20px;
+        height: 230px;
+        resize: none;
+    }
+    
+    .list-unstyled{
+        & li {
+            font-size: 15px;
+            margin-left: 2px;
+            margin-top: 5px;
+            color: $white;
+        }
+    }
+}
+
+
+
+
+p{
+    &.form-message{
+        &.success,
+        &.error{
+            font-size: 16px;
+            color: $body-color;
+            background: $grey;
+            padding: 10px 15px;
+            margin-left: 15px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        
+        &.error{
+            color: #f00;
+        }
+    }
+}
+
+/*==== INDEX 2 ====*/
+
+.contact-form-tow{
+    & .single-contact-form{
+        & input,
+        & textarea{
+            background-color: $grey;
+            color: $body-color;
+            border: 1px solid $border-color;
+            
+            @include placeholder{
+                color: $body-color;
+                opacity: 1;
+            }
+        }
+        .list-unstyled{
+            & li {
+                color: #ff0000;
+            }
+        }
+    }
+}
+
+.list-unstyled{
+    & li {
+        font-size: 15px;
+        margin-left: 2px;
+        margin-top: 5px;
+        color: $white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

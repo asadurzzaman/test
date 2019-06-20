@@ -1,0 +1,173 @@
+
+
+
+
+/*===========================
+    4.About css 
+===========================*/
+
+
+.about-area{
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    
+    @media #{$lg}{
+        padding-bottom: 130px;
+    }
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+    
+    & .about-laptop{
+        position: absolute;
+        top: -15px;
+        right: 20px;
+        width: 135px;
+        @include transform(rotateY(180deg));
+        
+         @media #{$xs}{
+            width: 85px;
+        }
+         @media #{$md}{
+            top: 0;
+            width: 100px;
+        }
+    }
+    
+    & .about-man{
+        width: 95px;
+        position: absolute;
+        right: 60px;
+        bottom: -60px;
+        @include transform(rotateY(180deg));
+        z-index: 5;
+        
+        @media #{$xs}{
+            width: 40px;
+            bottom: -45px;
+        }
+        @media #{$md}{
+            width: 70px;
+            bottom: -75px;
+        }
+    }
+    
+    & .about-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        
+        @media #{$md}{
+            width: 100%;
+            position: relative;
+        }
+        @media #{$xs}{
+            width: 100%;
+            position: relative;
+        }
+        
+        & .image{
+            text-align: right;
+            padding-right: 70px;
+            margin-top: 130px;
+            
+            @media #{$lg}{
+                padding-right: 0;
+            }
+            @media #{$md}{
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 0 15px;
+                margin-top: 60px;
+            }
+            @media #{$xs}{
+                max-width: 520px;
+                margin: 0 auto;
+                margin-top: 50px;
+                padding: 0 15px;
+            }
+        }
+    }
+    
+    &.about-tow{
+        padding-top: 80px;
+        
+        @media #{$md}{
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+        @media #{$xs}{
+            padding-top: 30px;
+            padding-bottom: 80px;
+        }
+    }
+}
+
+
+
+.about-content{
+    & p{
+        padding-top: 20px;
+    }
+    
+    & .about-list{
+        padding-top: 15px;
+        
+        & li{
+            margin-top: 8px;
+            font-size: 16px;
+            
+            @media #{$xs}{
+                font-size: 15px;
+            }
+            @media #{$sm}{
+                font-size: 16px;
+            }
+            
+            & i{
+                color: $theme-color-2;
+                @include transition(0.3s);
+            }
+            
+            &:hover{
+                & i{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*==== INDEX 2 =====*/
+
+
+.about-image-tow{
+    position: relative;
+    & img{
+        width: 100%;
+        
+    }
+    
+    .about-shape{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+

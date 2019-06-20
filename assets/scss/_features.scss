@@ -1,0 +1,79 @@
+
+
+
+
+/*===========================
+    3.FEATURES css 
+===========================*/
+
+
+.features-area{
+    
+    @media #{$md}{
+        margin-top: 0;
+    }
+    @media #{$xs}{
+        margin-top: 0;
+    }
+}
+
+.features{
+    background-color: $white;
+    border-radius: 5px;
+    position: relative;
+    z-index: 5;
+    @include box-shadow(0px 0px 43px 0px rgba(144,144,144,0.25));
+    position: relative;
+    
+    @media #{$md}{
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    @media #{$xs}{
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    
+    & .features-man{
+        width: 85px;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        
+        @media #{$xs}{
+            top: -60px;
+            width: 60px;
+        }
+        @media #{$sm}{
+            top: -70px;
+            width: 65px;
+        }
+    }
+}
+.single-features{
+    padding: 0 15px;
+    
+    & .features-icon{
+        
+    }
+    & .features-content{
+        & .features-title{
+            & a{
+                font-size: 24px;
+                color: $heading-color;
+            }
+        }
+        &  p{
+            margin-top: 25px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

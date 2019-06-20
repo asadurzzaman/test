@@ -1,0 +1,310 @@
+
+
+
+
+/*===========================
+      7.WORK css 
+===========================*/
+
+
+.work-area{
+    position: relative;
+    
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+    
+    & .work-woman{
+        width: 100px;
+        position: absolute;
+        left: 40px;
+        bottom: -80px;
+        z-index: 5;
+        
+        @media #{$xs}{
+            bottom: -40px;
+            width: 45px;
+        }
+        @media #{$md}{
+            bottom: -60px;
+            width: 60px;
+        }
+        
+        & img{
+            width: 100%;            
+        }
+    }
+}
+
+
+.work-menu{
+    
+    & ul{
+        & li{
+            font-size: 16px;
+            color: $theme-color;
+            background-color: $grey;
+            line-height: 48px;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 0 40px;
+            position: relative;
+            margin: 10px 15px 0;
+            cursor: pointer;
+            @include transition(0.3s);
+            
+            @media #{$md}{
+                margin: 10px 10px 0;
+                padding: 0 30px;
+                line-height: 38px;
+            }
+            @media #{$xs}{
+                margin: 10px 7px 0;
+                padding: 0 20px;
+                line-height: 38px;
+                font-size: 14px;
+            }
+            
+            & span{
+                position: absolute;
+                top: -17px;
+                right: -17px;
+                width: 35px;
+                height: 35px;
+                line-height: 29px;
+                background-color: $theme-color;
+                border-radius: 50%;
+                border: 3px solid $white;
+                color: $white;
+                font-size: 12px;
+                display: none;
+                
+                @media #{$md}{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 23px;
+                    font-size: 11px;
+                    top: -15px;
+                    right: -15px;
+                }
+                @media #{$xs}{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 23px;
+                    font-size: 11px;
+                    top: -15px;
+                    right: -15px;
+                }
+            }
+            
+            &:hover{
+                background-color: $theme-color;
+                color: $white;
+                border-color: $theme-color;
+            }
+            &.active{
+                background-color: $theme-color;
+                color: $white;
+                border-color: $theme-color;
+                
+                & span{
+                    display: block;
+                }
+            }
+        }
+    }
+    
+/*==== INDEX 2 ====*/
+    
+    &.work-menu-tow{
+        & ul{
+            & li{
+                color: $theme-color-3;
+                
+                & span{
+                    background-color: $theme-color-3;
+                }
+                
+                &:hover{
+                    background-color: $theme-color-3;
+                    border-color: $theme-color-3;
+                    color: $white;
+                }
+                &.active{
+                    background-color: $theme-color-3;
+                    border-color: $theme-color-3;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+.single-work{
+    background-color: $white;
+    
+    & .work-image{
+        padding: 6px;
+        position: relative;
+        @include transition(0.3s);
+        
+        & img{
+            width: 100%;
+        }
+        
+        & .work-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            border: 6px solid $theme-color;
+            @include transition(0.3s);
+            
+            & .work-icon{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                @include transform(translateY(-50%));
+                
+                & li{
+                    display: inline-block;
+                    margin: 0 10px;
+                    @include transition(0.4s);
+                    
+                    &:nth-of-type(1){
+                        @include transform(translateX(-100%));
+                    }
+                    &:nth-of-type(2){
+                        @include transform(translateX(100%));
+                    }
+                    
+                    & a{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 22px;
+                        color: $white;
+                        background-color: $theme-color;
+                        border-radius: 50%;
+                        @include transition(0.3s);
+                        
+                        @media #{$sm}{
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            font-size: 18px;
+                        }
+                        
+                        &:hover{
+                            background-color: $white;
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    & .work-content{
+        padding-top: 15px;
+        padding-bottom: 20px;
+        border: 1px solid $border-color;
+        border-top: 0;
+        
+        & .work-title{
+            & a{
+                font-size: 18px;
+                color: $heading-color;
+                margin-bottom: 5px;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & span{
+            color: $body-color;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    
+    &:hover{
+        & .work-image{
+            
+            & .work-overlay{
+                opacity: 1;
+                visibility: visible;
+                
+                & .work-icon{
+                    li{
+                        @include transform(translateX(0));
+                    }
+                }
+            }
+        }
+    }
+    
+/*==== INDEX 2 ====*/
+    
+    &.work-tow{
+        
+        & .work-image{
+            & .work-overlay{
+                border-color: $theme-color-3;
+                
+                & .work-icon{
+                    & li{
+                        & a{
+                            background-color: $theme-color-3;
+                            color: $white;
+                            
+                            &:hover{
+                                background-color: $white;
+                                color: $theme-color-3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        & .work-content{
+            & .work-title{
+                
+                & a{
+                    &:hover{
+                        color: $theme-color-3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

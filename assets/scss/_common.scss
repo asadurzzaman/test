@@ -1,0 +1,433 @@
+
+
+/*===========================
+    1.COMMON css 
+===========================*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Rubik:400,500,700');
+
+ body {
+    font-family: $rubik;
+    font-weight: normal;
+    font-style: normal;
+    color: $body-color;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    @include box-sizing (border-box);
+}
+
+img {
+	max-width: 100%;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	text-decoration: none;
+}
+
+i,
+span,
+a{
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $poppins;
+	font-weight: 600;
+	color: $heading-color;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul,ol {
+	margin: 0px;
+	padding: 0px;
+    list-style-type: none;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	color: $body-color;
+	margin: 0px;
+    font-family: $rubik;
+    
+    @media #{$xs}{
+        font-size: 15px;
+        line-height: 26px;
+    }
+    @media #{$sm}{
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+.bg_cover{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+// others common css here
+
+
+
+/*===== All Button Style =====*/
+
+.main-btn {
+	display: inline-block;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	@include user-select(none);
+	border: 1px solid $theme-color;
+	padding: 0 40px;
+	font-size: 16px;
+	line-height: 48px;
+	height: 50px;
+	border-radius: 50px;
+    color: $white;
+    cursor: pointer;
+    z-index: 5;
+    @include transition(0.3s);
+    background-color: $theme-color;
+    text-transform: uppercase;
+    font-family: $rubik;
+    @include box-shadow(0px 8px 16px 0px rgba(255,58,71,0.48));
+    
+    &:hover{
+        background-color: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+    
+    &.main-btn-2{
+        background-color: $white;
+        color: $theme-color;
+        border-color: $white;
+        &:hover{
+            background-color: $theme-color;
+            border-color: $theme-color;
+            color: $white;
+        }
+    }
+    &.main-btn-3{
+        background-color: $theme-color-3;
+        color: $white;
+        border-color: $theme-color-3;
+        @include box-shadow(0px 8px 16px 0px rgba(31,224,118,0.48));
+        &:hover{
+            background-color: $white;
+            border-color: $theme-color-3;
+            color: $theme-color-3;
+        }
+    }
+}
+
+
+
+/*===== All Section Title Style =====*/
+
+.section-title{
+    & .sub-title{
+        font-size: 18px;
+        font-family: $rubik;
+        font-weight: 500;
+        color: $theme-color;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        
+        @media #{$lg}{
+            font-size: 16px;
+        }
+        @media #{$xs}{
+            font-size: 15px;
+        }
+    }
+    & .title{
+        font-size: 50px;
+        
+        @media #{$lg}{
+            font-size: 42px;
+        }
+        @media #{$md}{
+            font-size: 38px;
+        }
+        @media #{$xs}{
+            font-size: 28px;
+        }
+    }
+    
+    &.section-title-2{
+        & .sub-title,
+        & .title{
+            color: $white;
+        }
+    }
+    
+    &.section-title-tow{
+        & .sub-title{
+            color: $theme-color-3;
+        }
+        & .title{}
+    }
+}
+
+
+/*===== All animation Style =====*/
+
+
+.animation1{
+    @include animation(up-down 4s infinite);
+}
+.animation2{
+    @include animation(up-down 4s infinite);
+    @include animation-delay(0.2s);
+}
+.animation3{
+    @include animation(up-down 4s infinite);
+    @include animation-delay(0.4s);
+}
+.animation4{
+    @include animation(up-down 4s infinite);
+    @include animation-delay(0.6s);
+}
+
+.animation5{
+    @include animation(rotate 4s infinite);
+}
+.animation6{
+    @include animation(rotatey 4s infinite);
+}
+
+
+
+@keyframes up-down {
+  0%   {
+      @include transform(translateY(-20px));
+    }
+  50% {
+      @include transform(translateY(0));
+    }
+  100% {
+      @include transform(translateY(-20px));
+    }
+}
+
+@-webkit-keyframes up-down {
+  0%   {
+      @include transform(translateY(-20px));
+    }
+  50% {
+      @include transform(translateY(0));
+    }
+  100% {
+      @include transform(translateY(-20px));
+    }
+}
+
+
+@keyframes rotate {
+  0%   {
+      @include transform(scale(1.2) rotate(0deg));
+    }
+  50% {
+      @include transform(scale(0.9) rotate(180deg));
+    }
+  100% {
+      @include transform(scale(1.2) rotate(360deg));
+    }
+}
+
+@-webkit-keyframes rotate {
+  0%   {
+      @include transform(scale(1.2) rotate(0deg));
+    }
+  50% {
+      @include transform(scale(0.9) rotate(180deg));
+    }
+  100% {
+      @include transform(scale(1.2) rotate(360deg));
+    }
+}
+
+
+@keyframes rotatey {
+  0%   {
+      @include transform(scale(1.2) rotateY(0deg));
+    }
+  50% {
+      @include transform(scale(0.9) rotateY(180deg));
+    }
+  100% {
+      @include transform(scale(1.2) rotateY(360deg));
+    }
+}
+@-webkit-keyframes rotatey {
+  0%   {
+      @include transform(scale(1.2) rotateY(0deg));
+    }
+  50% {
+      @include transform(scale(0.9) rotateY(180deg));
+    }
+  100% {
+      @include transform(scale(1.2) rotateY(360deg));
+    }
+}
+
+
+/*===== All Preloader Style =====*/
+
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    overflow: hidden;
+    background: $theme-color-2;
+    
+    &.preloader-tow{
+        background: $theme-color-3;
+        
+        & .loader{
+            border-top-color: $heading-color;
+            
+            &::before{
+                border-top-color: $white;
+            }
+            &::after{
+                border-top-color: $heading-color;
+            }
+        }
+    }
+    
+    & .loader{
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 110px;
+        height: 110px;
+        margin: -80px 0 0 -75px;
+        border-radius: 50%;
+        border: 7px solid transparent;
+        border-top-color: $theme-color;
+        @include animation(spin 1.7s linear infinite);
+        z-index: 11;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 7px solid transparent;
+            border-top-color: transparent;
+            border-top-color: $white;
+            @include animation(spin-reverse .6s linear infinite);
+        }
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 7px solid transparent;
+            border-top-color: transparent;
+            border-top-color: $theme-color;
+            @include animation(spin 1s linear infinite);
+        }
+    }
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+      @include transform (rotate(0deg));
+  }
+  100% {
+      @include transform (rotate(360deg));
+  }
+}
+
+@keyframes spin {
+  0% {
+      @include transform (rotate(0deg));
+  }
+  100% {
+      @include transform (rotate(360deg));
+  }
+}
+
+@-webkit-keyframes spin-reverse {
+  0% {
+      @include transform (rotate(0deg));
+  }
+  100% {
+      @include transform (rotate(-360deg));
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+      @include transform (rotate(0deg));
+  }
+  100% {
+      @include transform (rotate(-360deg));
+  }
+}
+
+
+
+
+
+
+
+

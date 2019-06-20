@@ -1,0 +1,114 @@
+
+
+
+
+/*===========================
+      10.PRICING css 
+===========================*/
+
+
+.pricing-area{
+    @media #{$md}{
+        padding-top: 95px;
+        padding-bottom: 83px;
+    }
+    
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 63px;
+    }
+}
+
+
+.single-pricing{
+    background-color: $white;
+    padding: 50px;
+    padding-top: 20px;
+    
+    @media #{$lg}{
+        padding: 35px;
+        padding-top: 5px;
+    }
+    @media #{$md}{
+        padding: 0 20px 30px;
+        
+    }
+    @media #{$xs}{
+        padding: 20px 15px;
+    }
+    @media #{$sm}{
+        padding: 50px;
+    }
+    
+    & .pricing-thumb{
+        & img{
+            width: 195px;
+            height: 180px;
+        }
+    }
+    & .pricing-price{
+        & h2{
+            font-size: 50px;
+            font-weight: 400;
+            
+            @media #{$md}{
+                font-size: 44px;
+            }
+            
+            & span{
+                font-size: 18px;
+                color: $body-color;
+                text-transform: uppercase;
+                
+                @media #{$md}{
+                    font-size: 16px;
+                }
+            }
+        }
+        
+        p{
+            text-transform: uppercase;
+            color: $theme-color;
+            
+            @media #{$md}{
+                font-size: 14px;
+            }
+        }
+    }
+    & .pricing-content{
+        
+    }
+    
+    &.pricing-tow{
+        & .pricing-price{
+            & p{
+                color: $theme-color-3;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
